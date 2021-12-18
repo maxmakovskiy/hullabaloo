@@ -12,7 +12,11 @@ engOffice name = target ++
     where target = (fst name) ++ " " ++ (snd name)
 
 ausOffice name = target ++ 
-            " - 86 Baker St.North, Sydney NSW 2156, Australia"
+            " - 86, Baker St.North, Sydney NSW 2156, Australia"
+    where target = (fst name) ++ " " ++ (snd name)
+
+colOffice name = "Dear " ++ target ++
+            " - 1400, Forum Blvd Ste 7A, Columbia"
     where target = (fst name) ++ " " ++ (snd name)
 
 -- Choose neccessary function and return it
@@ -21,6 +25,7 @@ getLocationFunction location =
         "us" -> usOffice
         "eng" -> engOffice
         "aus" -> ausOffice
+        "col" -> colOffice
         _ -> (\name -> (fst name) ++ " " ++ (snd name)) -- default case
 
 -- main
