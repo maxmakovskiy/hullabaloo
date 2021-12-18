@@ -14,6 +14,15 @@ names = [("Adams", "Baker"),
         ("Quinn", "Reily")]
 
 -- Create function that will be taked to List.sortBy
+compareBySecondName pair1 pair2 = if compare lname2 lname1 == EQ
+    then compare fname2 fname1
+    else compare lname2 lname1
+    where lname1 = snd pair1
+          lname2 = snd pair2
+          fname1 = fst pair1
+          fname2 = fst pair1
+
+{-- 
 compareBySecondName pair1 pair2 = if lname1 > lname2
     then GT
     else
@@ -30,4 +39,5 @@ compareBySecondName pair1 pair2 = if lname1 > lname2
           lname2 = snd pair2
           fname1 = fst pair1
           fname2 = fst pair1
+--}
     
