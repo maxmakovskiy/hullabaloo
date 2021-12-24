@@ -13,7 +13,7 @@ myHead [] = error "Given list doesn't have a head"
 
 -- Return tail of list
 -- Use _ for value that doesn't interesting us
+myTail [] = []
 myTail (_:xs) = xs
-
 
 
